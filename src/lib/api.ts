@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const BASE = import.meta.env.VITE_API_URL || "";
+
 const api = axios.create({
-  baseURL: "/api/v1",
+  baseURL: `${BASE}/api/v1`,
   withCredentials: true,
   headers: { "Content-Type": "application/json" },
 });
@@ -10,7 +12,7 @@ let csrfToken: string | null = null;
 
 export async function fetchCsrfToken() {
   try {
-    const { data } = await axios.get("/api/v1/auth/csrf", { withCredentials: true });
+    const { data } = await axios.get(`${BASE}/api/v1/auth/csrf`, { withCredentials: true });
     csrfToken = data.csrf_token;
   } catch {
     csrfToken = null;
@@ -42,7 +44,7 @@ api.interceptors.response.use(
     if (error.response?.status === 401 && !original._retry) {
       original._retry = true;
       try {
-        await axios.post("/api/v1/auth/refresh", {}, { withCredentials: true });
+        await axios.post(`${BASE}/api/v1/auth/refresh`, {}, { withCredentials: true });
         await fetchCsrfToken();
         return api(original);
       } catch {
