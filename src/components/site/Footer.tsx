@@ -16,13 +16,13 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <h4 className="font-semibold text-sm mb-3">Product</h4>
+          <div className="font-semibold text-sm mb-3">Product</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>How it works</li><li>Pricing</li><li>For brokers</li><li>Security</li>
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold text-sm mb-3">Company</h4>
+          <div className="font-semibold text-sm mb-3">Company</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>About</li><li>Careers</li><li>Press</li><li>Contact</li>
           </ul>

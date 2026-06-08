@@ -96,6 +96,7 @@ export function LiveMatchDemo() {
                   value={budget}
                   onChange={(e) => setBudget(Number(e.target.value))}
                   className="mt-3 w-full accent-accent"
+                  aria-label={`Budget: ₹${budget.toLocaleString("en-IN")} per month`}
                 />
                 <div className="flex justify-between text-[10px] text-muted-foreground mt-1">
                   <span>₹8k</span><span>₹80k</span>

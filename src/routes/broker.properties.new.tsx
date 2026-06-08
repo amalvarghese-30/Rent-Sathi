@@ -113,13 +113,13 @@ export default function AddPropertyPage() {
                 <Field label="Monthly rent (₹)" icon={<Wallet className="size-3.5" />}>
                   <div className="rounded-xl bg-secondary/50 p-4">
                     <div className="font-display font-bold text-2xl tracking-tight">₹{rent.toLocaleString("en-IN")}</div>
-                    <input type="range" min={5000} max={150000} step={1000} value={rent} onChange={(e) => setRent(Number(e.target.value))} className="mt-3 w-full accent-accent" />
+                    <input type="range" min={5000} max={150000} step={1000} value={rent} onChange={(e) => setRent(Number(e.target.value))} className="mt-3 w-full accent-accent" aria-label={`Monthly rent: ₹${rent.toLocaleString("en-IN")}`} />
                   </div>
                 </Field>
                 <Field label="Security deposit (₹)" icon={<Wallet className="size-3.5" />}>
                   <div className="rounded-xl bg-secondary/50 p-4">
                     <div className="font-display font-bold text-2xl tracking-tight">₹{deposit.toLocaleString("en-IN")}</div>
-                    <input type="range" min={0} max={500000} step={5000} value={deposit} onChange={(e) => setDeposit(Number(e.target.value))} className="mt-3 w-full accent-accent" />
+                    <input type="range" min={0} max={500000} step={5000} value={deposit} onChange={(e) => setDeposit(Number(e.target.value))} className="mt-3 w-full accent-accent" aria-label={`Security deposit: ₹${deposit.toLocaleString("en-IN")}`} />
                   </div>
                 </Field>
               </div>

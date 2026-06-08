@@ -147,12 +147,12 @@ export default function PostRequirementPage() {
                   <Field label="Minimum" icon={<Wallet className="size-3.5" />}>
                     <input type="range" min={5000} max={100000} step={1000} value={data.budgetMin}
                       onChange={(e) => setData({ ...data, budgetMin: Math.min(Number(e.target.value), data.budgetMax - 1000) })}
-                      className="w-full accent-accent" />
+                      className="w-full accent-accent" aria-label={`Minimum budget: ₹${data.budgetMin.toLocaleString("en-IN")}`} />
                   </Field>
                   <Field label="Maximum" icon={<Wallet className="size-3.5" />}>
                     <input type="range" min={5000} max={150000} step={1000} value={data.budgetMax}
                       onChange={(e) => setData({ ...data, budgetMax: Math.max(Number(e.target.value), data.budgetMin + 1000) })}
-                      className="w-full accent-accent" />
+                      className="w-full accent-accent" aria-label={`Maximum budget: ₹${data.budgetMax.toLocaleString("en-IN")}`} />
                   </Field>
                 </div>
               )}
