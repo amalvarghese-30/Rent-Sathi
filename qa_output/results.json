@@ -1,0 +1,41 @@
+{
+  "passed": [
+    "landing-page",
+    "page-auth-login",
+    "page-auth-register",
+    "page-auth-broker-register",
+    "page-auth-forgot-password",
+    "page-auth-admin-login",
+    "page-docs-api",
+    "page-docs-stack",
+    "page-docs-security",
+    "page-docs-integration",
+    "page-docs-readiness",
+    "user-login",
+    "user-dashboard",
+    "user-post-requirement",
+    "user-requirements-list",
+    "user-matches",
+    "user-notifications",
+    "broker-login",
+    "broker-workspace",
+    "broker-add-property",
+    "broker-matches",
+    "admin-login",
+    "admin-dashboard",
+    "admin-matches",
+    "admin-complaints",
+    "admin-pending",
+    "admin-pending",
+    "admin-audit",
+    "admin-ops",
+    "admin-schema"
+  ],
+  "failed": [],
+  "errors": [],
+  "allErrors": [
+    "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <a> a \n\n  ...\n    <RenderedRoute match={{params:{}, ...}} routeContext={{...}}>\n      <ProtectedLayout>\n        <Outlet>\n          <RenderedRoute match={{params:{}, ...}} routeContext={{outlet:null, ...}}>\n            <MatchesPage>\n              <div className=\"min-h-scre...\">\n                <Helmet>\n                <Navbar>\n                <main className=\"container-...\">\n                  <LinkWithRef>\n                  <div>\n                  <div className=\"mt-12 grid...\">\n                    <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} ...>\n                      <div style={{opacity:0, ...}} ref={function}>\n                        <LinkWithRef to=\"/matches/6...\" className=\"block roun...\">\n>                         <a\n>                           className=\"block rounded-2xl border border-border bg-surface p-6 md:p-8 shadow-card-rs gri...\"\n>                           href=\"/matches/6a26bf525a18cc23d8af38b0\"\n>                           onClick={function handleClick}\n>                           ref={function}\n>                           target={undefined}\n>                           data-discover=\"true\"\n>                         >\n                            <div>\n                            <div>\n                            <div className=\"space-y-3 ...\">\n                              <Bar>\n                              <Bar>\n                              <Bar>\n                              <LinkWithRef to=\"/matches/6...\" className=\"mt-2 w-ful...\">\n>                               <a\n>                                 className=\"mt-2 w-full h-10 rounded-full bg-primary text-primary-foreground text-sm ...\"\n>                                 href=\"/matches/6a26bf525a18cc23d8af38b0\"\n>                                 onClick={function handleClick}\n>                                 ref={function}\n>                                 target={undefined}\n>                                 data-discover=\"true\"\n>                               >\n",
+    "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. a <a>"
+  ]
+}
