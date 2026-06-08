@@ -33,12 +33,13 @@ security = HTTPBearer(auto_error=False)
 @router.get("/csrf")
 async def csrf_token(response: Response):
     token = secrets.token_urlsafe(32)
+    is_prod = settings.environment == "production"
     response.set_cookie(
         key="csrf_token",
         value=token,
         httponly=False,
-        secure=settings.environment == "production",
-        samesite="strict" if settings.environment == "production" else "lax",
+        secure=is_prod,
+        samesite="none" if is_prod else "lax",
         max_age=86400,
         path="/",
     )
@@ -56,7 +57,7 @@ def set_refresh_cookie(response: Response, token: str):
         value=token,
         httponly=True,
         secure=is_prod,
-        samesite="strict" if is_prod else "lax",
+        samesite="none" if is_prod else "lax",
         max_age=60 * 60 * 24 * 7,
         path="/api/v1/auth",
     )
@@ -69,7 +70,7 @@ def set_access_cookie(response: Response, token: str):
         value=token,
         httponly=True,
         secure=is_prod,
-        samesite="strict" if is_prod else "lax",
+        samesite="none" if is_prod else "lax",
         max_age=60 * 15,
         path="/",
     )

@@ -250,7 +250,7 @@ async def get_csrf_token():
         value=token,
         httponly=False,  # JS must read this
         secure=is_prod,
-        samesite="strict" if is_prod else "lax",
+        samesite="none" if is_prod else "lax",
         max_age=60 * 60,
         path="/",
     )
